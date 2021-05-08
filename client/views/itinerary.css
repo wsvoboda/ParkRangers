@@ -1,14 +1,14 @@
 body {
   background-color: rgb(253, 247, 232);
   color: rgb(54, 34, 34);
-  font-family: 'Boogaloo', cursive;
+  font-family: "Boogaloo", cursive;
 }
 .container {
   width: 100%;
-  font-family: 'Boogaloo', cursive;
+  font-family: "Boogaloo", cursive;
 }
 nav a {
-  font-family: 'Boogaloo', cursive;
+  font-family: "Boogaloo", cursive;
   text-decoration: none;
   color: black;
   font-size: x-large;
@@ -101,10 +101,10 @@ nav a:hover {
 
 .header {
   display: flex;
-  justify-self: flex-start;
   width: 80%;
   padding-left: 3%;
   font-size: 75px;
+  justify-content: center;
 }
 nav {
   display: flex;
@@ -112,4 +112,20 @@ nav {
   text-decoration: none;
   height: 100px;
   padding-top: 25px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-body form {
+  margin: auto;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  justify-content: space-around;
+  align-items: center;
 }
