@@ -2,11 +2,11 @@ let body = document.querySelector("body");
 let parkList = document.querySelector(".main");
 let tripNameField = document.querySelector(".trip");
 let tripList = [];
-let form = document.querySelector("form.fullSearch");
-let regionSelector = form.querySelector(".selectpicker");
-let stateSelector = form.querySelector(".selectState");
+let form = document.querySelector(".fullSearch");
+let regionSelector = document.querySelector(".selectpicker");
+let stateSelector = document.querySelector(".selectState");
 
-//state lists for region categories
+// state lists for region categories
 const statesByRegion = {
   west: ["AK", "NV", "CA", "AZ", "WA", "OR", "ID"],
   midwest: [
@@ -32,16 +32,18 @@ const statesByRegion = {
   northeast: ["ME", "VT", "NH", "NY", "PA", "NJ", "MD", "DE", "NJ", "WV", "VA"],
 };
 
-//calls parks API after validating user does not have duplicate trip name
+// calls parks API after validating user does not have duplicate trip name
+// not currently working if any trip name has a space in it
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const state = stateSelector.value;
-  const tripName = form.querySelector(".trip");
+  const tripName = document.querySelector(".trip");
   const data = await fetch("http://localhost:3000/user-trip-names");
   const json = await data.json();
+  console.log(json);
   const usedNames = json.nameString.split(" ");
-  const startDate = form.querySelector("#start");
-  const endDate = form.querySelector("#end");
+  const startDate = document.querySelector("#start");
+  const endDate = document.querySelector("#end");
   for (tName of usedNames) {
     console.log(usedNames);
     if (tName === tripName.value) {
@@ -59,7 +61,7 @@ form.addEventListener("submit", async (e) => {
   return false;
 });
 
-//API call and card generator
+// API call and card generator
 const getParkByState = async (state) => {
   const getInfo = await fetch(
     `https://developer.nps.gov/api/v1/parks?stateCode=${state}&api_key=m6434v3FtLw4YiOsDKpm5lq611cn54CHw1iRchdH`
@@ -151,7 +153,7 @@ const getParkByState = async (state) => {
   body.append(doneBtnDiv);
 };
 
-//generates state list based on region selection
+// generates state list based on region selection
 regionSelector.addEventListener("change", (e) => {
   const region = e.target.value;
   const states = statesByRegion[region];

@@ -15,7 +15,6 @@ body {
   flex-wrap: wrap;
   font-family: "Boogaloo", cursive;
   width: 100%;
-  background-image: url("/client/assets/ballbackground.png");
   color: rgb(54, 34, 34);
 }
 .givetripName {
