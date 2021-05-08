@@ -1,5 +1,4 @@
 # Park Rangers - Back End Project 
-### This site can be accessed [here](https://wsvoboda.github.io/ParkRangers/).
 ---
 
 ## Team members:
