@@ -23,10 +23,12 @@ nav a {
   font-size: x-large;
   font-weight: bold;
 }
+
 nav a:hover {
   color: rgb(54, 34, 34);
   text-shadow: 2px 2px 4px rgb(57, 8, 85);
 }
+
 .formDiv {
   display: flex;
   flex-direction: column;
@@ -34,6 +36,7 @@ nav a:hover {
   align-items: center;
   /* margin-left: 30%; */
 }
+
 button {
   margin-top: 10%;
 }
@@ -55,6 +58,7 @@ input {
 #registerLink {
   font-family: "Boogaloo", cursive;
   text-decoration: none;
+  color: rgb(54, 34, 34);
 }
 #registerLink:hover {
   text-shadow: 2px 2px 4px rgb(57, 8, 85);
