@@ -132,7 +132,7 @@ const getParkByState = async (state) => {
       });
       itenerary.className += "add";
       alert(
-        "This park has been added to your itenerary! Good luck on your Explorations!"
+        "This park has been added to your itinerary! Good luck on your explorations!"
       );
       console.log(dataForTripDB);
     });

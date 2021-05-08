@@ -13,7 +13,7 @@ body {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Boogaloo", cursive;
   width: 100%;
   background-image: url("/client/assets/ballbackground.png");
   color: rgb(54, 34, 34);
@@ -144,8 +144,14 @@ nav a:hover {
   max-width: 180px !important;
   margin: auto;
   margin-top: 5px;
+  font-size: 16px;
 }
 
 .card-body p {
   padding-top: 3px;
+  font-size: 16px;
+}
+
+input {
+  text-align: center;
 }
