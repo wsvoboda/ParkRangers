@@ -53,7 +53,6 @@ body {
   padding: 2%;
   margin-top: 5%;
   background-color: #5c4d7d;
-
   color: rgb(253, 247, 232);
   font-family: "Boogaloo", cursive;
 }
@@ -154,4 +153,46 @@ nav a:hover {
 
 input {
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    width: 90%;
+    height: 100vh;
+    background-size: cover;
+  }
+  .navbar {
+    width: 100%;
+    background-size: cover;
+    height: max-content;
+  }
+  .navbar a {
+    font-size: 12px;
+  }
+  .navbar img {
+    width: 90px;
+    height: 40px;
+  }
+  .container-fluid {
+    align-items: right;
+  }
+  #backgroundImage {
+    display: none !important;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .fullSearch h2 {
+    font-size: 20px;
+  }
+
+  .choiceContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
