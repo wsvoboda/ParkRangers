@@ -35,15 +35,25 @@ nav a:hover {
   height: 100vh;
 }
 
-/* @media screen and (max-width: 1350px) {
+@media screen and (max-width: 600px) {
   main {
     width: 90%;
     height: 100vh;
     background-size: cover;
   }
-   .navbar {
+  .navbar {
     width: 100%;
     background-size: cover;
     height: max-content;
   }
-} */
+  .navbar a {
+    font-size: 12px;
+  }
+  .navbar img {
+    width: 90px;
+    height: 40px;
+  }
+  .container-fluid {
+    align-items: right;
+  }
+}
