@@ -19,8 +19,8 @@ const bcrypt = require("bcrypt");
 const session = require("express-session");
 const { createClient } = require("@supabase/supabase-js");
 const supabase = createClient(
-  "https://trvnebvemlsnomuzdgff.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyMDA2MTU1NCwiZXhwIjoxOTM1NjM3NTU0fQ.J892pC3M_hmQCZ91fkQoo-iUXuOoQuNrYzZ7la_idIk"
+  "https://simcpwzmyamzcwrmjuct.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyMDQzMzQxMiwiZXhwIjoxOTM2MDA5NDEyfQ.LRmsptbw9EhweKA9TsPPGHxF_IlUdCPJPpGusHJn5D0"
 );
 app.use(
   session({
@@ -138,7 +138,6 @@ app.post("/addToParksDB", async (req, res) => {
   res.send("WORKS!");
 });
 
-
 //validate username, and password against hashed password in DB
 app.post("/login", async (req, res) => {
   let username = req.body.username;
@@ -167,22 +166,22 @@ app.post("/login", async (req, res) => {
 //client side CRUD routes (not HTML pages)
 
 //return list of user's trips for trip name validation
-app.get("/user-trip-names",async (req,res) => {
-  nameObj = {nameString: ""}
-  const userId = req.session.user.userId
-  const {data,error} = await supabase
-  .from("Trips")
-  .select(`tripName`)
-  .match({userId: userId})
-  if(data){
-    for(object of data){
-      nameObj.nameString+=object.tripName
+app.get("/user-trip-names", async (req, res) => {
+  nameObj = { nameString: "" };
+  const userId = req.session.user.userId;
+  const { data, error } = await supabase
+    .from("Trips")
+    .select(`tripName`)
+    .match({ userId: userId });
+  if (data) {
+    for (object of data) {
+      nameObj.nameString += object.tripName;
     }
-    res.send(nameObj)
+    res.send(nameObj);
+  } else {
+    console.log(error);
   }
-  else{console.log(error)}
-  
-})
+});
 
 //Create a trip in the DB
 app.post("/addToTripsDB", async (req, res) => {
