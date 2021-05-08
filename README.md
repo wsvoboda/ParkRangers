@@ -27,8 +27,6 @@
 *  "express-es6-template-engine": "^2.2.3",
 * "express-session": "^1.17.1"
 
----
-
 ### Front End:
 * HTML & External CSS
 * JavaScript
