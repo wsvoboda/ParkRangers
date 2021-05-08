@@ -125,6 +125,7 @@ nav a:hover {
 }
 
 .card-img-top {
+  /* min-width: 350px !important; */ /* add media query */
   max-width: 450px !important;
   width: 70% !important;
   border-radius: 2px;
