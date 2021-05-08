@@ -9,7 +9,7 @@
 * <a href="https://github.com/mjbulostin" target="_blank">Michael Bulostin</a>
 
 
-### Back-end:
+### Back End:
 * Node.js
 * PostgreSQL database (Supabase)
 * RESTful API ([API Reference](https://www.nps.gov/subjects/developer/api-documentation.htm))
@@ -29,7 +29,7 @@
 
 ---
 
-### Front-end:
+### Front End:
 * HTML & External CSS
 * JavaScript
 * Bootstrap elements
