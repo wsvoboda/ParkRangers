@@ -96,3 +96,35 @@ h4 {
   justify-self: center;
   margin-top: 10%;
 }
+
+@media screen and (max-width: 600px) {
+  main {
+    width: 90%;
+    height: 100vh;
+    background-size: cover;
+  }
+  .navbar {
+    width: 100%;
+    background-size: cover;
+    height: max-content;
+  }
+  .navbar a {
+    font-size: 12px;
+  }
+  .navbar img {
+    width: 90px;
+    height: 40px;
+  }
+
+  #backgroundImage {
+    display: none !important;
+  }
+
+  #loginLink {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
+}

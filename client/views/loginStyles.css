@@ -124,4 +124,8 @@ h4 {
   #backgroundImage {
     display: none !important;
   }
+
+  h4 {
+    text-align: center;
+  }
 }
