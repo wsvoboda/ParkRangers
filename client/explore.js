@@ -1,6 +1,6 @@
-let body = document.querySelector("body")
+let body = document.querySelector("body");
 let parkList = document.querySelector(".main");
-let tripNameField = document.querySelector(".trip")
+let tripNameField = document.querySelector(".trip");
 let tripList = [];
 let form = document.querySelector("form.fullSearch");
 let regionSelector = form.querySelector(".selectpicker");
@@ -32,33 +32,29 @@ const statesByRegion = {
   northeast: ["ME", "VT", "NH", "NY", "PA", "NJ", "MD", "DE", "NJ", "WV", "VA"],
 };
 
-
 //calls parks API after validating user does not have duplicate trip name
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const state = stateSelector.value;
   const tripName = form.querySelector(".trip");
-  const data = await fetch("http://localhost:3000/user-trip-names")
-  const json = await data.json()
-  const usedNames = json.nameString.split(" ")
+  const data = await fetch("http://localhost:3000/user-trip-names");
+  const json = await data.json();
+  const usedNames = json.nameString.split(" ");
   const startDate = form.querySelector("#start");
   const endDate = form.querySelector("#end");
-  for(tName of usedNames){
-    console.log(usedNames)
-    if(tName === tripName.value){
-      tripName.value = ""
-      regionSelector.value = ""
-      alert("That trip name already exists. Please enter a unique name.")
-      location.reload()
-
+  for (tName of usedNames) {
+    console.log(usedNames);
+    if (tName === tripName.value) {
+      tripName.value = "";
+      regionSelector.value = "";
+      alert("That trip name already exists. Please enter a unique name.");
+      location.reload();
     }
   }
-  if(tripName.value){
-    tripList = [tripName.value, startDate.value, endDate.value]
-    getParkByState(state)
+  if (tripName.value) {
+    tripList = [tripName.value, startDate.value, endDate.value];
+    getParkByState(state);
   }
-  
-
 
   return false;
 });
@@ -86,17 +82,14 @@ const getParkByState = async (state) => {
       convertInfo.data[i].images[0] && convertInfo.data[i].images[0].url;
     let infoDiv = document.createElement("div");
     infoDiv.className = "card-body";
-    let parkState = document.createElement("h3");
-    parkState.innerHTML = `State: ${convertInfo.data[i].states}`;
     let viewMore = document.createElement("button");
     viewMore.className = "btn btn-warning btn-sm text-light";
-    viewMore.innerHTML = "More Info?";
+    viewMore.innerHTML = "More Info";
     viewMore.addEventListener("click", function () {
       let parkInfo = document.createElement("p");
       parkInfo.innerText = convertInfo.data[i].description;
       let parkDirections = document.createElement("div");
-      parkDirections.innerHTML =
-        convertInfo.data[i].directionsInfo + convertInfo.data[i].directionsUrl;
+      parkDirections.innerHTML = convertInfo.data[i].directionsInfo;
 
       infoDiv.append(parkInfo, parkDirections);
     });
@@ -104,7 +97,7 @@ const getParkByState = async (state) => {
     parkName.className = "parkNames";
     parkName.innerHTML = convertInfo.data[i].fullName;
     let itenerary = document.createElement("button");
-    itenerary.innerHTML = `Add to Itinerary +`;
+    itenerary.innerHTML = `Add to Itinerary`;
     itenerary.className = "btn btn-success btn-sm text-light";
 
     itenerary.addEventListener("click", async function () {
@@ -143,18 +136,19 @@ const getParkByState = async (state) => {
       );
       console.log(dataForTripDB);
     });
-    infoDiv.append(parkName, parkState, viewMore, itenerary);
+    infoDiv.append(parkName, viewMore, itenerary);
     imgDiv.append(mainImg);
     parkContainer.append(imgDiv, infoDiv);
-    parkList.append(parkContainer); 
+    parkList.append(parkContainer);
   }
-  const doneBtnDiv = document.createElement("div")
-  doneBtnDiv.className = "done-btn-div"
-  const tripRedirectLink = document.createElement("a")
-  tripRedirectLink.href = "/view-all-trips"
-  tripRedirectLink.innerHTML = '<button type="button" class="btn btn-warning btn-lg text-light">Save Trip</button>'
-  doneBtnDiv.append(tripRedirectLink)
-  body.append(doneBtnDiv)
+  const doneBtnDiv = document.createElement("div");
+  doneBtnDiv.className = "done-btn-div";
+  const tripRedirectLink = document.createElement("a");
+  tripRedirectLink.href = "/view-all-trips";
+  tripRedirectLink.innerHTML =
+    '<button type="button" class="btn btn-warning btn-lg text-light">Save Trip</button>';
+  doneBtnDiv.append(tripRedirectLink);
+  body.append(doneBtnDiv);
 };
 
 //generates state list based on region selection
