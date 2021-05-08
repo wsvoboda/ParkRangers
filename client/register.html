@@ -32,7 +32,8 @@
     </ul>
 </nav>
     <div class="login-container">
-    <div class="bg-image d-flex align-items-center" style="background-image: url('assets/background2.png'); height: 100vh; background-repeat: no-repeat; background-size: cover;">
+    <div class="bg-image d-flex align-items-center" id="backgroundImage" style="background-image: url('assets/national-park.jpg'); height: 70vh; background-repeat: no-repeat; background-size: cover;"></div>
+      <div class="formdiv">
     <form action="/register" method="POST">
       <img src="assets/create account.png" alt="" width="180px" height="80px">
       <br>
@@ -58,9 +59,10 @@
       </div>
       <button type="submit" class="btn btn-outline-warning btn-lg">Create Account</button><h4>${message}</h4>
       <a id="loginLink" href="/login">Already Have an Account? Login Here</a>
-    </div>
+    
     </form>
   </div>
+
   </div>
 </body>
 </html>
