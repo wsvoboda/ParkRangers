@@ -1,4 +1,3 @@
-
 body {
   background-color: rgb(253, 247, 232);
 }
@@ -8,16 +7,15 @@ body {
   margin-left: 47vw !important;
 }
 
-
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   width: 100%;
-  background-image: url('/client/assets/ballbackground.png');
+  background-image: url("/client/assets/ballbackground.png");
   color: rgb(54, 34, 34);
 }
 .givetripName {
@@ -58,8 +56,6 @@ body {
 
   color: rgb(253, 247, 232);
   font-family: "Boogaloo", cursive;
-
-
 }
 .choiceContainer {
   width: 100%;
@@ -100,7 +96,7 @@ nav {
   padding-top: 25px;
 }
 a {
-  font-family: 'Boogaloo', cursive;
+  font-family: "Boogaloo", cursive;
   text-decoration: none;
   color: black;
   font-size: x-large;
@@ -126,7 +122,8 @@ nav a:hover {
 }
 
 .card-img-top {
-  max-width: 70%;
+  max-width: 450px !important;
+  width: 70% !important;
   border-radius: 2px;
 }
 
@@ -135,10 +132,12 @@ nav a:hover {
   flex-direction: column;
   padding: 2%;
   justify-content: space-around;
+  align-items: center;
 }
 
 .card button {
-  width: 40% !important;
+  width: 30% !important;
+  max-width: 180px !important;
   margin: auto;
   margin-top: 5px;
 }
