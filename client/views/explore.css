@@ -124,7 +124,6 @@ nav a:hover {
 }
 
 .card-img-top {
-  /* min-width: 350px !important; */ /* add media query */
   max-width: 450px !important;
   width: 70% !important;
   border-radius: 2px;
@@ -185,7 +184,16 @@ input {
   }
 
   .fullSearch h2 {
-    font-size: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  label {
+    text-align: center;
+  }
+
+  .dateContainer {
+    width: 80%;
   }
 
   .choiceContainer {
@@ -194,5 +202,44 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .card-img-top {
+    max-width: 450px !important;
+    min-width: 150px !important;
+    min-height: 150px !important;
+    max-height: 200px !important;
+    width: 70% !important;
+    border-radius: 2px;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .parkNames h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  input {
+    font-size: 14px;
+  }
+  select {
+    font-size: 14px;
+  }
+
+  input[type="date"] {
+    font-size: 14px;
+  }
+
+  .card button {
+    width: 50% !important;
+    font-size: 12px;
   }
 }
