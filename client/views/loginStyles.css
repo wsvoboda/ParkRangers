@@ -89,6 +89,8 @@ h4 {
   min-height: 550px;
   min-height: 575px;
   align-self: center;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .formdiv {
