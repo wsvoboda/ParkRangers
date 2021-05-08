@@ -1,20 +1,15 @@
 body {
-  margin-left: 10%;
-  margin-right: 10%;
   background-color: rgb(253, 247, 232);
   color: rgb(54, 34, 34);
 }
+
 nav {
   text-decoration: none;
   height: 100px;
   padding-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: auto;
   color: rgb(54, 34, 34);
 }
-a {
+nav a {
   font-family: "Boogaloo", cursive;
   text-decoration: none;
   color: black;
