@@ -39,7 +39,7 @@ button {
   border-color: #ffbe0b;
   background-color: #59189a00;
   width: 100%;
-  border-radius: 10%;
+  border-radius: 5px;
 }
 input,
 label {
@@ -48,6 +48,10 @@ label {
 }
 input {
   color: rgb(54, 34, 34);
+}
+
+button {
+  opacity: 70%;
 }
 #registerLink {
   font-family: "Boogaloo", cursive;
@@ -62,4 +66,34 @@ h4 {
   margin-top: 10px;
   font-family: "Boogaloo", cursive;
   color: rgb(54, 34, 34);
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "form" "form" "pic" "pic"
+    "form" "form" "pic" "pic";
+  height: 80vh;
+}
+
+#backgroundImage {
+  grid-area: pic;
+  display: grid;
+  grid-column: 2;
+  border-radius: 40px;
+  opacity: 50%;
+  max-width: 800px;
+  min-width: 600px;
+  align-self: center;
+}
+
+.formdiv {
+  grid-area: form;
+  display: grid;
+  grid-column: 1;
+  align-self: center;
+  justify-self: center;
+  margin-top: 10%;
 }
