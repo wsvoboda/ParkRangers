@@ -159,7 +159,9 @@ app.post("/login", async (req, res) => {
       }
     });
   } else {
-    res.render("login");
+    res.render("login", {
+      locals: { message: "Invalid username or password" },
+    });
   }
 });
 
