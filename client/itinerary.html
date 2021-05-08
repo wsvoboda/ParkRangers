@@ -39,6 +39,7 @@
       ${Object.entries(objectOfTrips).map(([tripName,trips]) => `
       <div class="trip-container">
         <div class="trip-details">
+          <div class="trip-name-and-cards">
         <div class="trip-name"><h1>${tripName}</h1></div>
         <div class="dates">
         <h5>Start Date: ${trips[0].startDate}</h5>
@@ -57,7 +58,7 @@
 
           </form>
         </div></div>
-          `).join("")}</div> <br />
+          `).join("")}</div> <br /></div>
 <div class="button-container">
         <form action="/delete-trip/${tripName}" method="POST">
           <button class="btn btn-outline-success" type="submit">Delete Trip</button>
