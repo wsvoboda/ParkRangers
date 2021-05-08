@@ -86,6 +86,8 @@ h4 {
   opacity: 50%;
   max-width: 800px;
   min-width: 600px;
+  min-height: 550px;
+  min-height: 575px;
   align-self: center;
 }
 
