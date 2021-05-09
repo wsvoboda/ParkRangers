@@ -16,7 +16,7 @@ If the user clicks on the "Create A Trip" button, they will be brought to the lo
 
 ![image](https://user-images.githubusercontent.com/78281930/117556983-317d1100-b034-11eb-8f2b-41cb9eb0b7f8.png)
 
-The user needs to enter all information in order to create an account. If the username is already in use, the page will inform the user. 
+The user needs to enter all information in order to create an account. If the username is already in use, the page will inform the user. The user's password is hashed and added to the backend database, along with the rest of their data.
 
 ## Login Page
 
@@ -41,6 +41,26 @@ The user can click "More Info" if they want more information on the park. If the
 ![image](https://user-images.githubusercontent.com/78281930/117557197-2a570280-b036-11eb-9bd0-fa64a65a4283.png)
 
 On this page, users are able to edit their trip (name and dates), delete parks from the trip, or delete the trip entirely. If they want to go back to add more parks to a trip, they can go to the Explore page again and use the same trip name.
+
+## This project has both front end and back end features.
+
+### Back-end:
+* Node.js
+* JavaScript
+* PostgreSQL database (Supabase)
+* RESTful API
+* API reference: https://www.nps.gov/subjects/developer/api-documentation.htm
+* Express package
+* ES6 Templating
+* Form validation
+* Full C.R.U.D. functionality
+* Bcrypt user authentication & validation
+
+### Front-end:
+* HTML & CSS
+* JavaScript
+* Bootstrap elements
+* Mobile responsiveness
 
 *This site was originally built while working in a group in my bootcamp! I cloned the repo and added a few personal touches to it! If you'd like to see the original, please visit [this page](https://github.com/mjbulostin/ParkRangers).*
 
