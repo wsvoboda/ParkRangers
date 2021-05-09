@@ -16,7 +16,7 @@ If the user clicks on the "Create A Trip" button, they will be brought to the lo
 
 ![image](https://user-images.githubusercontent.com/78281930/117556983-317d1100-b034-11eb-8f2b-41cb9eb0b7f8.png)
 
-The user needs to enter all information in order to create an account. If the username is already in use, the page will inform the user. The user's password is hashed and added to the backend database, along with the rest of their data.
+The user needs to enter all information in order to create an account. If the username is already in use, the page will inform the user. The user's password is hashed and added to the back end database, along with the rest of their data.
 
 ## Login Page
 
