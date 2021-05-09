@@ -44,7 +44,7 @@ On this page, users are able to edit their trip (name and dates), delete parks f
 
 ## This project has both front end and back end features.
 
-### Back-end:
+### Back end:
 * Node.js
 * JavaScript
 * PostgreSQL database (Supabase)
@@ -56,7 +56,7 @@ On this page, users are able to edit their trip (name and dates), delete parks f
 * Full C.R.U.D. functionality
 * Bcrypt user authentication & validation
 
-### Front-end:
+### Front end:
 * HTML & CSS
 * JavaScript
 * Bootstrap elements
