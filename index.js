@@ -200,7 +200,7 @@ app.post("/addToTripsDB", async (req, res) => {
     },
   ]);
   console.log(data);
-  res.send("WORKS~!");
+  res.send("WORKS!");
 });
 
 //Modify the name and dates of a user's trip
