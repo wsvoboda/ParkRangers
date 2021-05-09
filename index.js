@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, "/client")));
 
 let parkIdGlobal = "";
 
-const PORT = 3000;
+const PORT = process.env.PORT || 8080;
 
 //get routes for html pages
 
