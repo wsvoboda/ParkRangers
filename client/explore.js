@@ -34,32 +34,32 @@ const statesByRegion = {
 
 // calls parks API after validating user does not have duplicate trip name
 // not currently working if any trip name has a space in it
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const state = stateSelector.value;
-  const tripName = document.querySelector(".trip");
-  const data = await fetch("http://localhost:8080/user-trip-names");
-  const json = await data.json();
-  console.log(json);
-  const usedNames = json.nameString.split(" ");
-  const startDate = document.querySelector("#start");
-  const endDate = document.querySelector("#end");
-  for (tName of usedNames) {
-    console.log(usedNames);
-    if (tName === tripName.value) {
-      tripName.value = "";
-      regionSelector.value = "";
-      alert("That trip name already exists. Please enter a unique name.");
-      location.reload();
-    }
-  }
-  if (tripName.value) {
-    tripList = [tripName.value, startDate.value, endDate.value];
-    getParkByState(state);
-  }
+// form.addEventListener("submit", async (e) => {
+//   e.preventDefault();
+//   const state = stateSelector.value;
+//   const tripName = document.querySelector(".trip");
+//   const data = await fetch("http://localhost:8080/user-trip-names");
+//   const json = await data.json();
+//   console.log(json);
+//   const usedNames = json.nameString.split(" ");
+//   const startDate = document.querySelector("#start");
+//   const endDate = document.querySelector("#end");
+//   for (tName of usedNames) {
+//     console.log(usedNames);
+//     if (tName === tripName.value) {
+//       tripName.value = "";
+//       regionSelector.value = "";
+//       alert("That trip name already exists. Please enter a unique name.");
+//       location.reload();
+//     }
+//   }
+//   if (tripName.value) {
+//     tripList = [tripName.value, startDate.value, endDate.value];
+//     getParkByState(state);
+//   }
 
-  return false;
-});
+//   return false;
+// });
 
 // API call and card generator
 const getParkByState = async (state) => {
