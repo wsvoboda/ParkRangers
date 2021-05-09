@@ -38,7 +38,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const state = stateSelector.value;
   const tripName = document.querySelector(".trip");
-  const data = await fetch("http://localhost:3000/user-trip-names");
+  const data = await fetch("http://localhost:8080/user-trip-names");
   const json = await data.json();
   console.log(json);
   const usedNames = json.nameString.split(" ");
@@ -103,7 +103,7 @@ const getParkByState = async (state) => {
     itenerary.className = "btn btn-success btn-sm text-light";
 
     itenerary.addEventListener("click", async function () {
-      const dataForParkDB = await fetch("http://localhost:3000/addToParksDB", {
+      const dataForParkDB = await fetch("http://localhost:8080/addToParksDB", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -120,7 +120,7 @@ const getParkByState = async (state) => {
           endDate: tripList[2],
         }),
       });
-      const dataForTripDB = await fetch("http://localhost:3000/addToTripsDB", {
+      const dataForTripDB = await fetch("http://localhost:8080/addToTripsDB", {
         method: "POST",
         headers: {
           Accept: "application/json",
