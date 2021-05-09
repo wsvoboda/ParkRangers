@@ -62,5 +62,5 @@ On this page, users are able to edit their trip (name and dates), delete parks f
 * Bootstrap elements
 * Mobile responsiveness
 
-*This site was originally built while working in a group in my bootcamp! I cloned the repo and added a few personal touches to it! If you'd like to see the original, please visit [this page](https://github.com/mjbulostin/ParkRangers).*
+*This site was originally built while working in a group in my bootcamp! I cloned the repo and added a few personal touches to it! If you'd like to see the original project, please visit [this page](https://github.com/mjbulostin/ParkRangers).*
 
