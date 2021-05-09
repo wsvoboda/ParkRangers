@@ -38,7 +38,9 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const state = stateSelector.value;
   const tripName = document.querySelector(".trip");
-  const data = await fetch("http://localhost:8080/user-trip-names");
+  const data = await fetch(
+    "https://park-rangers-project.herokuapp.com/user-trip-names"
+  );
   const json = await data.json();
   console.log(json);
   const usedNames = json.nameString.split(" ");
@@ -101,35 +103,42 @@ const getParkByState = async (state) => {
     itenerary.className = "btn btn-success btn-sm text-light";
 
     itenerary.addEventListener("click", async function () {
-      const dataForParkDB = await fetch("http://localhost:8080/addToParksDB", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          parkName: convertInfo.data[i].fullName,
-          directionsURL: convertInfo.data[i].directionsUrl,
-          moreInfoURL: convertInfo.data[i].url,
-          parkImage:
-            convertInfo.data[i].images[0] && convertInfo.data[i].images[0].url,
-          tripName: tripList[0],
-          startDate: tripList[1],
-          endDate: tripList[2],
-        }),
-      });
-      const dataForTripDB = await fetch("http://localhost:8080/addToTripsDB", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          tripName: tripList[0],
-          startDate: tripList[1],
-          endDate: tripList[2],
-        }),
-      });
+      const dataForParkDB = await fetch(
+        "https://park-rangers-project.herokuapp.com/addToParksDB",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            parkName: convertInfo.data[i].fullName,
+            directionsURL: convertInfo.data[i].directionsUrl,
+            moreInfoURL: convertInfo.data[i].url,
+            parkImage:
+              convertInfo.data[i].images[0] &&
+              convertInfo.data[i].images[0].url,
+            tripName: tripList[0],
+            startDate: tripList[1],
+            endDate: tripList[2],
+          }),
+        }
+      );
+      const dataForTripDB = await fetch(
+        "https://park-rangers-project.herokuapp.com/addToTripsDB",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            tripName: tripList[0],
+            startDate: tripList[1],
+            endDate: tripList[2],
+          }),
+        }
+      );
       itenerary.className += "add";
       alert(
         "This park has been added to your itinerary! Good luck on your explorations!"
