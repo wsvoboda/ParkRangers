@@ -103,10 +103,14 @@ h4 {
 }
 
 @media screen and (max-width: 600px) {
-  main {
+  .mainContainer {
     width: 90%;
     height: 100vh;
     background-size: cover;
+    padding-right: 40%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
   }
   .navbar {
     width: 100%;
@@ -129,5 +133,10 @@ h4 {
 
   h4 {
     text-align: center;
+  }
+
+  .formdiv {
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
