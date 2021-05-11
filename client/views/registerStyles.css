@@ -100,10 +100,15 @@ h4 {
 }
 
 @media screen and (max-width: 600px) {
-  main {
+  .login-container {
     width: 90%;
     height: 100vh;
     background-size: cover;
+    padding-right: 40%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 10%;
   }
   .navbar {
     width: 100%;
