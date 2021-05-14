@@ -40,9 +40,27 @@ The user can click "More Info" if they want more information on the park. If the
 
 ![image](https://user-images.githubusercontent.com/78281930/117557197-2a570280-b036-11eb-9bd0-fa64a65a4283.png)
 
-On this page, users are able to edit their trip (name and dates), delete parks from the trip, or delete the trip entirely. If they want to go back to add more parks to a trip, they can go to the Explore page again and use the same trip name.
+On this page, users are able to edit their trip (name and dates), delete parks from the trip, or delete the trip entirely. If they want to go back to add more parks to a trip, they can go to the Explore page again and use the same trip name. 
 
-## This project has both front end and back end features.
+## Back End
+
+This project utilized Supabase for easy back end collaboration. The back end consists of 3 models: users, parks, and trips.
+
+The users model holds user data. All passwords are hashed before being stored in the database. When a user adds a park to their trip, that park is added to the park table. Lastly, the trips table has a user's trip data. 
+
+<u>Users</u>
+  
+![image](https://user-images.githubusercontent.com/78281930/118336289-fcab0700-b4d6-11eb-814d-4c47f0e99aa8.png)
+
+<u>Parks</u>
+
+![image](https://user-images.githubusercontent.com/78281930/118336503-79d67c00-b4d7-11eb-9d71-18f639e9150f.png)
+
+<u>Trips</u>
+
+![image](https://user-images.githubusercontent.com/78281930/118336781-fa957800-b4d7-11eb-81a0-71e785a53b4e.png)
+
+## Project Features
 
 ### Back end:
 * Node.js
