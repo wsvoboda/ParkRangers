@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjbulostin/ParkRangers.git"
+    "url": "git+https://github.com/wsvoboda/ParkRangers.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mjbulostin/ParkRangers/issues"
+    "url": "https://github.com/wsvoboda/ParkRangers/issues"
   },
-  "homepage": "https://github.com/mjbulostin/ParkRangers#readme",
+  "homepage": "https://github.com/wsvoboda/ParkRangers#readme",
   "dependencies": {
     "@supabase/supabase-js": "^1.11.9",
     "bcrypt": "^5.0.1",
