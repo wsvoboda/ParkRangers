@@ -1,7 +1,5 @@
 # Park Rangers - Back End Project 
 
-This site is fully functional and can be seen using [this link](https://park-rangers-project.herokuapp.com).
-
 This site was created to provide the user the ability to create a trip involving visits to National Parks in the United States. 
 
 ## Welcome Page
